@@ -12,6 +12,6 @@ namespace MyApp.Domain
         public static IServiceCollection AddDomainDI(this IServiceCollection services)
         {
             return services;
-        };
+        }
     }
 }
