@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="MyApp.API/MyApp.API.csproj" />
   <Project Path="MyApp.Application/MyApp.Application.csproj" />
+  <Project Path="MyApp.Domain/MyApp.Domain.csproj" Id="d7c38b9b-80d0-4c00-b44d-541828e6531e" />
   <Project Path="MyApp.Infrastructure/MyApp.Infrastructure.csproj" />
 </Solution>
