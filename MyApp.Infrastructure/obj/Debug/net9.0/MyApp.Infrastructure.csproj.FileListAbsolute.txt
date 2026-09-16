@@ -1,0 +1,12 @@
+C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.Infrastructure.deps.json
+C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.Infrastructure.dll
+C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.Infrastructure.pdb
+C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\MyApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\MyApp.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\MyApp.Infrastructure.AssemblyInfo.cs
+C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\MyApp.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\MyApp.Infrastructure.sourcelink.json
+C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\MyApp.Infrastructure.dll
+C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\refint\MyApp.Infrastructure.dll
+C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\MyApp.Infrastructure.pdb
+C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\ref\MyApp.Infrastructure.dll
