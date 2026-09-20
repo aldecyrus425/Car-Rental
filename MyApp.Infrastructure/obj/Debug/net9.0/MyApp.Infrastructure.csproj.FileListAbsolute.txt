@@ -10,19 +10,11 @@ C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\MyAp
 C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\refint\MyApp.Infrastructure.dll
 C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\MyApp.Infrastructure.pdb
 C:\Users\admin\source\repos\CarRental\MyApp.Infrastructure\obj\Debug\net9.0\ref\MyApp.Infrastructure.dll
-C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.API.deps.json
-C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.API.runtimeconfig.json
-C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\appsettings.Development.json
-C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\appsettings.json
-C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.API.staticwebassets.endpoints.json
-C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.API.exe
 C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.Infrastructure.deps.json
 C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.Infrastructure.dll
 C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.Infrastructure.pdb
-C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.API.dll
 C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.Application.dll
 C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.Domain.dll
-C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.API.pdb
 C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.Domain.pdb
 C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.Application.pdb
 C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\obj\Debug\net9.0\MyApp.Infrastructure.csproj.AssemblyReference.cache
@@ -36,3 +28,5 @@ C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\obj\Debug\net9.0\MyA
 C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\obj\Debug\net9.0\refint\MyApp.Infrastructure.dll
 C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\obj\Debug\net9.0\MyApp.Infrastructure.pdb
 C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\obj\Debug\net9.0\ref\MyApp.Infrastructure.dll
+C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\bin\Debug\net9.0\MyApp.Infrastructure.runtimeconfig.json
+C:\Users\aldec\source\repos\Car-Rental\MyApp.Infrastructure\obj\Debug\net9.0\MyApp.Infrastructure.genruntimeconfig.cache
