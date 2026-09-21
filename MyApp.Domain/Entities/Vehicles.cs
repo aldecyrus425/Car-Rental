@@ -35,6 +35,7 @@ namespace MyApp.Domain.Entities
 
         public ICollection<RentalVehicles> RentalVehicle { get; private set; } = new List<RentalVehicles>();
         public ICollection<DamageReports> DamageReport = new List<DamageReports>();
+        public ICollection<VehicleMaintenance> VehicleMaintenance { get; private set; } = new List<VehicleMaintenance>();
 
     }
 }

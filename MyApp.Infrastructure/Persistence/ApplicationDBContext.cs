@@ -236,6 +236,21 @@ namespace MyApp.Infrastructure.Persistence
                 .OnDelete(DeleteBehavior.Restrict);
             });
 
+            modelBuilder.Entity<VehicleMaintenance>(entity =>
+            {
+                entity.HasKey(x => x.MaintenanceId);
+
+                entity.HasOne(x => x.Vehicles)
+                .WithMany(x => x.VehicleMaintenance)
+                .HasForeignKey(x => x.VehicleId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasOne(x => x.Users)
+                .WithMany(x => x.VehicleMaintenance)
+                .HasForeignKey(x => x.CreateByUserId)
+                .OnDelete(DeleteBehavior.Restrict);
+            });
+
             modelBuilder.Entity<DamageReports>(entity =>
             {
                 entity.HasKey(x => x.DamageReportId);
