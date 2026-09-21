@@ -29,6 +29,12 @@ namespace MyApp.Domain.Entities
         public DateTime CreatedAt { get; private set; } // Timestamp of when the vehicle was added to the system
         public DateTime? UpdatedAt { get; private set; } // Timestamp of when the vehicle was last updated in the system
 
+        protected Vehicles() { }
+
         public ICollection<VehicleImages> VehicleImages { get; private set; } = new List<VehicleImages>(); // Navigation property for related vehicle images>
+
+        public ICollection<RentalVehicles> RentalVehicle { get; private set; } = new List<RentalVehicles>();
+        public ICollection<DamageReports> DamageReport = new List<DamageReports>();
+
     }
 }

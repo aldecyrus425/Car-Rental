@@ -17,5 +17,7 @@ namespace MyApp.Domain.Entities
         public bool IsPrimary { get; private set; }
         public DateTime CreatedAt { get; private set; }
 
+        protected VehicleImages() { }
+
     }
 }

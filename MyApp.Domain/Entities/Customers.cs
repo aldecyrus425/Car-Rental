@@ -31,6 +31,7 @@ namespace MyApp.Domain.Entities
         protected Customers() { } // For EF Core
 
         public ICollection<CustomerDocuments> Documents { get; private set; } = new List<CustomerDocuments>();
+        public ICollection<RentalAgreements> RentalAgreements { get; private set; } = new List<RentalAgreements>();
 
     }
 }

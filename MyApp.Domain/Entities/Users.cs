@@ -23,5 +23,16 @@ namespace MyApp.Domain.Entities
         public DateTime? UpdatedAt { get; private set; }
 
         protected Users() { } // For EF Core
+
+        public ICollection<RentalAgreements> RentalAgreements { get; private set; } = new List<RentalAgreements>();
+        public ICollection<RentalDocuments> RentalDocuments { get; private set; } = new List<RentalDocuments>();
+        public ICollection<Payments> Payments { get; private set; } = new List<Payments>();
+        public ICollection<RentalExtensions> RentalExtensions = new List<RentalExtensions>();
+        public ICollection<VehicleInspections> VehicleInspections = new List<VehicleInspections>();
+        public ICollection<DamageReports> DamageReport = new List<DamageReports>();
+        public ICollection<AdditionalCharges> AdditionalCharge { get; private set; } = new List<AdditionalCharges>();
+        public ICollection<VehicleMaintenance> VehicleMaintenance { get; private set; } = new List<VehicleMaintenance>();
+
+
     }
 }

@@ -17,6 +17,10 @@ namespace MyApp.Domain.Entities
         public decimal DailyBaseRate { get; private set; }
         public bool IsActive { get; private set; }
 
+        protected VehicleTypes() { }
+
         public ICollection<Vehicles> Vehicles { get; private set; } = new List<Vehicles>();
+        public ICollection<PricingAreaRules> PricingAreaRules { get; private set; } = new List<PricingAreaRules>();
+        public ICollection<PricingRules> PricingRules { get; private set; } = new List<PricingRules>();
     }
 }

@@ -16,6 +16,8 @@ namespace MyApp.Domain.Entities
         public string ContactNumber { get; private set; }
         public bool IsActive { get; private set; }
 
+        protected Branches() { }
+
         public ICollection<Vehicles> Vehicles { get; private set; } = new List<Vehicles>(); // Navigation property for related vehicles
     }
 }
