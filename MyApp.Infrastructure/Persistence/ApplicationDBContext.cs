@@ -288,5 +288,7 @@ namespace MyApp.Infrastructure.Persistence
 
             base.OnModelCreating(modelBuilder);
         }
+
+        public DbSet<Users> Users { get; set; }
     }
 }

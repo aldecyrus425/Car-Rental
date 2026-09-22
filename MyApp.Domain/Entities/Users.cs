@@ -34,5 +34,17 @@ namespace MyApp.Domain.Entities
         public ICollection<VehicleMaintenance> VehicleMaintenance { get; private set; } = new List<VehicleMaintenance>();
 
 
+        public Users(string firstname, string? middlename, string lastname, string email, string phonenumber, string hashpassword, Guid userRoleId, bool isActive)
+        {
+            FirstName = firstname;
+            MiddleName = middlename;
+            LastName = lastname;
+            Email = email;
+            PhoneNumber = phonenumber;
+            PasswordHash = hashpassword;
+            UserRoleId = userRoleId;
+            IsActive = isActive;
+        }
+
     }
 }
