@@ -46,5 +46,10 @@ namespace MyApp.Infrastructure.Repository
         {
             await _dbContext.SaveChangesAsync();
         }
+
+        public async Task<Users?> GetUserByIdAsync(Guid id)
+        {
+            return await _dbContext.Users.FirstOrDefaultAsync(x => x.UserId == id);
+        }
     }
 }

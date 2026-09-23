@@ -13,6 +13,7 @@ namespace MyApp.Application.Interfaces.Repository
         Task<IEnumerable<Users>> GetAllUsersAsync();
         Task CreateUserAsync(Users user);
         Task<Users?> GetActiveUserById(Guid id);
+        Task<Users?> GetUserByIdAsync(Guid id);
         Task SaveChangesAsync();
     }
 }

@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using MyApp.Application.DTOs;
-using MyApp.Application.DTOs.User;
 using MyApp.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyApp.Application.Features.Users.Create
 {
-    public class CreateUserCommand : IRequest<GenericResponse<CreateUserResponse>>
+    public class CreateUserCommand : IRequest<GenericResponse<string>>
     {
         public string FirstName { get; set; }
         public string? MiddleName { get; set; }

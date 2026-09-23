@@ -16,5 +16,22 @@ namespace MyApp.Domain.Entities
         protected UserRoles() { } // For EF Core
 
         public ICollection<Users> Users { get; private set; } = new List<Users>();
+
+        public UserRoles(string name, string description, bool isActive)
+        {
+            Name = name;
+            Description = description;
+            IsActive = isActive;
+        }
+
+        public void DeleteUserRole()
+        {
+            IsActive = false;
+        }
+
+        public void ReactivateUserRole()
+        {
+            IsActive = true;
+        }
     }
 }

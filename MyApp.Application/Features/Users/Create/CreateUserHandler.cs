@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using MyApp.Application.DTOs;
-using MyApp.Application.DTOs.User;
 using MyApp.Application.Interfaces.Repository;
 using MyApp.Domain.Entities;
 using System;
@@ -11,47 +10,48 @@ using System.Threading.Tasks;
 
 namespace MyApp.Application.Features.Users.Create
 {
-    public class CreateUserHandler : IRequestHandler<CreateUserCommand, GenericResponse<CreateUserResponse>>
+    public class CreateUserHandler : IRequestHandler<CreateUserCommand, GenericResponse<string>>
     {
         private readonly IUserRepository _userRepo;
+        private readonly IUserRoleRepository _userRoleRepo;
 
-        public CreateUserHandler(IUserRepository userRepo)
+        public CreateUserHandler(IUserRepository userRepo, IUserRoleRepository userRoleRepo)
         {
             _userRepo = userRepo;
+            _userRoleRepo = userRoleRepo;
         }
 
-        public async Task<GenericResponse<CreateUserResponse>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+        public async Task<GenericResponse<string>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
             try
             {
+
+                var userRole = await _userRoleRepo.GetActiveUserRoleByIdAsync(request.UserRoleId);
+                if(userRole == null)
+                {
+                    return new GenericResponse<string>
+                    {
+                        message = "User role id is invalid.",
+                        isSuccess = false
+                    };
+                }
+
                 var hashPassword = BCrypt.Net.BCrypt.HashPassword(request.Password);
                 var user = new MyApp.Domain.Entities.Users(request.FirstName, request.MiddleName, request.LastName, request.Email, request.PhoneNumber, hashPassword, request.UserRoleId, request.IsActive);
 
                 await _userRepo.CreateUserAsync(user);
                 await _userRepo.SaveChangesAsync();
 
-                //Fetch the user role here
 
-                return new GenericResponse<CreateUserResponse>
+                return new GenericResponse<string>
                 {
                     message = "User added succesfully.",
                     isSuccess = false,
-                    Data = new CreateUserResponse
-                    {
-                        UserId = user.UserId,
-                        FirstName = user.FirstName,
-                        MiddleName = user.MiddleName,
-                        LastName = user.LastName,
-                        Email = user.Email,
-                        PhoneNumber = user.PhoneNumber,
-                        UserRoleName = user.UserRole.Name,
-                        IsActive = user.IsActive
-                    }
                 };
             }
             catch(Exception ex)
             {
-                return new GenericResponse<CreateUserResponse>
+                return new GenericResponse<string>
                 {
                     message = ex.Message,
                     isSuccess = false

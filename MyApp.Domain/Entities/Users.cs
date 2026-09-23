@@ -46,5 +46,15 @@ namespace MyApp.Domain.Entities
             IsActive = isActive;
         }
 
+        public void DeleteUser()
+        {
+            IsActive = false;
+        }
+
+        public void ReactivateUser()
+        {
+            IsActive = true;
+        }
+
     }
 }
