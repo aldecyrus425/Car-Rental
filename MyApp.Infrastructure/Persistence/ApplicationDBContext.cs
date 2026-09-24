@@ -292,5 +292,6 @@ namespace MyApp.Infrastructure.Persistence
         public DbSet<Users> Users { get; set; }
         public DbSet<UserRoles> UserRoles { get; set; }
         public DbSet<Customers> Customers { get; set; }
+        public DbSet<Branches> Branches { get; set; }
     }
 }
