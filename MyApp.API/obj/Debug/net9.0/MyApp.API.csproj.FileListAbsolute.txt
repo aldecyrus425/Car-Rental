@@ -107,7 +107,6 @@ C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\System.Memory.
 C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\System.Runtime.Caching.dll
 C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\System.Security.Permissions.dll
-C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\System.Text.Json.dll
 C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\System.Windows.Extensions.dll
 C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
@@ -295,3 +294,7 @@ C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\ru\Microsoft.C
 C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\BCrypt-Net-Next.dll
+C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\FluentValidation.dll
+C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\MediatR.dll
+C:\Users\aldec\source\repos\Car-Rental\MyApp.API\bin\Debug\net9.0\MediatR.Contracts.dll

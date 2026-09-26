@@ -37,5 +37,10 @@ namespace MyApp.Infrastructure.Repository
         {
             return await _context.Branches.FirstOrDefaultAsync(b => b.BranchId == branchId);
         }
+
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
     }
 }

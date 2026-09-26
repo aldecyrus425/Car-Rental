@@ -1,4 +1,6 @@
 using MyApp.Application;
+using MyApp.Application.Features.Users.Create;
+using MyApp.Application.Interfaces.Repository;
 using MyApp.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,7 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddApplicationDI();
 builder.Services.AddInfrastructureDI(builder.Configuration);
+
 
 var app = builder.Build();
 
