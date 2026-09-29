@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "m/OttMrSvLA=",
+  "dgSpecHash": "w+R+01LK0/E=",
   "success": true,
   "projectFilePath": "C:\\Users\\aldec\\source\\repos\\Car-Rental\\MyApp.Application\\MyApp.Application.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,10 @@
     "C:\\Users\\aldec\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\aldec\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
     "C:\\Users\\aldec\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\aldec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.20\\microsoft.extensions.dependencyinjection.abstractions.9.0.20.nupkg.sha512"
+    "C:\\Users\\aldec\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.32\\microsoft.aspnetcore.http.features.3.1.32.nupkg.sha512",
+    "C:\\Users\\aldec\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.20\\microsoft.extensions.dependencyinjection.abstractions.9.0.20.nupkg.sha512",
+    "C:\\Users\\aldec\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.32\\microsoft.extensions.primitives.3.1.32.nupkg.sha512",
+    "C:\\Users\\aldec\\.nuget\\packages\\system.io.pipelines\\4.7.5\\system.io.pipelines.4.7.5.nupkg.sha512"
   ],
   "logs": []
 }

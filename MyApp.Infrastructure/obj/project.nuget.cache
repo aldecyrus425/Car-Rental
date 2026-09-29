@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZvlcCjtKxuw=",
+  "dgSpecHash": "3TqwEl9JgqQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\aldec\\source\\repos\\Car-Rental\\MyApp.Infrastructure\\MyApp.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\aldec\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\aldec\\.nuget\\packages\\mediatr\\12.5.0\\mediatr.12.5.0.nupkg.sha512",
     "C:\\Users\\aldec\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\aldec\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.1.32\\microsoft.aspnetcore.http.features.3.1.32.nupkg.sha512",
     "C:\\Users\\aldec\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\aldec\\.nuget\\packages\\microsoft.build.framework\\17.8.43\\microsoft.build.framework.17.8.43.nupkg.sha512",
     "C:\\Users\\aldec\\.nuget\\packages\\microsoft.build.locator\\1.7.8\\microsoft.build.locator.1.7.8.nupkg.sha512",
