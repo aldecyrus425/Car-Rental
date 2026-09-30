@@ -31,6 +31,40 @@ namespace MyApp.Domain.Entities
 
         protected Vehicles() { }
 
+        public Vehicles(
+            Guid vehicleTypeId,
+            string plateNumber,
+            string vehicleCode,
+            string? vin,
+            string make,
+            string model,
+            int year,
+            string color,
+            decimal currentMileage,
+            decimal fuelLevel,
+            string status,
+            DateOnly? registrationExpiryDate,
+            DateOnly? insuranceExpiryDate,
+            Guid branchId)
+        {
+            VehicleId = Guid.NewGuid();
+            VehicleTypeId = vehicleTypeId;
+            PlateNumber = plateNumber;
+            VehicleCode = vehicleCode;
+            VIN = vin;
+            Make = make;
+            Model = model;
+            Year = year;
+            Color = color;
+            CurrentMileage = currentMileage;
+            FuelLevel = fuelLevel;
+            Status = status;
+            RegistrationExpiryDate = registrationExpiryDate;
+            InsuranceExpiryDate = insuranceExpiryDate;
+            BranchId = branchId;
+            CreatedAt = DateTime.Now;
+        }
+
         public ICollection<VehicleImages> VehicleImages { get; private set; } = new List<VehicleImages>(); // Navigation property for related vehicle images>
 
         public ICollection<RentalVehicles> RentalVehicle { get; private set; } = new List<RentalVehicles>();

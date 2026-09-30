@@ -1707,7 +1707,10 @@
         },
         "runtime": {
           "bin/placeholder/MyApp.Infrastructure.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },

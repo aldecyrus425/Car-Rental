@@ -26,6 +26,10 @@ namespace MyApp.Infrastructure
             services.AddScoped<IBranchRepository, BranchesRepository>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IUserRoleRepository, UserRoleRepository>();
+            services.AddScoped<ICustomerDocumentsRepository, CustomerDocumentRepository>();
+            services.AddScoped<ICustomerFilesRepository, CustomerFilesRepository>();
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
+            services.AddScoped<IVehicleImagesRepository, VehicleImagesRepository>();
 
             return services;
         }

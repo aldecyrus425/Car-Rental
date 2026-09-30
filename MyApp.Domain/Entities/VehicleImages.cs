@@ -19,5 +19,21 @@ namespace MyApp.Domain.Entities
 
         protected VehicleImages() { }
 
+        public VehicleImages(
+            Guid vehicleId,
+            string filePath,
+            string imageType,
+            string fileName,
+            bool isPrimary = false)
+        {
+            VehicleImageId = Guid.NewGuid();
+            VehicleId = vehicleId;
+            FilePath = filePath;
+            ImageType = imageType;
+            FileName = fileName;
+            IsPrimary = isPrimary;
+            CreatedAt = DateTime.Now;
+        }
+
     }
 }
