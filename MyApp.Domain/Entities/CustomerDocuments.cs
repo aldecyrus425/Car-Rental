@@ -35,10 +35,26 @@ namespace MyApp.Domain.Entities
 
         protected CustomerDocuments() { }
 
-//        CustomerDocumentId | CustomerId | DocumentType     | DocumentNumber
-//        -------------------|------------|------------------|----------------
-//        DOC-001            | CUST-001   | DriverLicense    | N01-23-456789
-//        DOC-002            | CUST-001   | NationalID       | 1234-5678-9012
-//        DOC-003            | CUST-001   | ProofOfAddress   | NULL
+        //        CustomerDocumentId | CustomerId | DocumentType     | DocumentNumber
+        //        -------------------|------------|------------------|----------------
+        //        DOC-001            | CUST-001   | DriverLicense    | N01-23-456789
+        //        DOC-002            | CUST-001   | NationalID       | 1234-5678-9012
+        //        DOC-003            | CUST-001   | ProofOfAddress   | NULL
+
+        public CustomerDocuments(Guid customerId, string documentType, string? documentNumber, DateOnly? expirationDate, bool isVerified, Guid? verifiedByUserId, string? remarks)
+        {
+            CustomerId = customerId;
+            DocumentType = documentType;
+            DocumentNumber = documentNumber;
+            ExpirationDate = expirationDate;
+            IsVerified = isVerified;
+            if (isVerified)
+            {
+                VerifiedByUserId = verifiedByUserId;
+                VerifiedAt = DateTime.Now;
+            }
+            Remarks = remarks;
+            CreatedAt = DateTime.Now;
+        }
     }
 }

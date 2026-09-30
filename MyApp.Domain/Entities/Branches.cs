@@ -19,5 +19,15 @@ namespace MyApp.Domain.Entities
         protected Branches() { }
 
         public ICollection<Vehicles> Vehicles { get; private set; } = new List<Vehicles>(); // Navigation property for related vehicles
+
+        public Branches(string name, string address, string city, string province, string contactNumber, bool isActive)
+        {
+            Name = name;
+            Address = address;
+            City = city;
+            Province = province;
+            ContactNumber = contactNumber;
+            IsActive = isActive;
+        }
     }
 }
