@@ -297,5 +297,6 @@ namespace MyApp.Infrastructure.Persistence
         public DbSet<CustomerDocumentFiles> CustomerDocumentFiles { get; set; }
         public DbSet<Vehicles> Vehicles { get; set; }
         public DbSet<VehicleImages> VehicleImages { get; set; }
+        public DbSet<VehicleTypes> VehicleTypes { get; set; }
     }
 }
