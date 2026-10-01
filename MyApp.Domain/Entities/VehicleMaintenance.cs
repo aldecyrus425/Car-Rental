@@ -24,5 +24,26 @@ namespace MyApp.Domain.Entities
         public Users Users { get; private set; }
 
         protected VehicleMaintenance() { }
+
+        public VehicleMaintenance(Guid vehicleId, string maintenanceType, string description, DateTime startDate, decimal mileage, decimal cost, string status, string? serviceProvider, string? remarks, Guid createByUserId)
+        {
+            MaintenanceId = Guid.NewGuid();
+            VehicleId = vehicleId;
+            MaintenanceType = maintenanceType;
+            Description = description;
+            StartDate = startDate;
+            Mileage = mileage;
+            Cost = cost;
+            Status = status;
+            ServiceProvider = serviceProvider;
+            Remarks = remarks;
+            CreateByUserId = createByUserId;
+        }
+
+        public void MaintenanceComplete()
+        {
+            CompletionDate = DateTime.UtcNow;
+            Status = "Completed";
+        }
     }
 }

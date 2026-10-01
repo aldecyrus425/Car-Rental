@@ -22,5 +22,16 @@ namespace MyApp.Domain.Entities
         public ICollection<Vehicles> Vehicles { get; private set; } = new List<Vehicles>();
         public ICollection<PricingAreaRules> PricingAreaRules { get; private set; } = new List<PricingAreaRules>();
         public ICollection<PricingRules> PricingRules { get; private set; } = new List<PricingRules>();
+
+        public VehicleTypes(string name, string? description, int seatingCapacity, string tranmissionType, string fuelType, decimal dailyBaseRate, bool isActive)
+        {
+            Name = name;
+            Description = description;
+            SeatingCapacity = seatingCapacity;
+            TransmissionType = tranmissionType;
+            FuelType = fuelType;
+            DailyBaseRate = dailyBaseRate;
+            IsActive = isActive;
+        }
     }
 }

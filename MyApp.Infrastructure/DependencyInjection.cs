@@ -30,7 +30,7 @@ namespace MyApp.Infrastructure
             services.AddScoped<ICustomerFilesRepository, CustomerFilesRepository>();
             services.AddScoped<IVehicleRepository, VehicleRepository>();
             services.AddScoped<IVehicleImagesRepository, VehicleImagesRepository>();
-
+            services.AddScoped<IVehicleTypeRepository, VehicleTypesRepository>();
             return services;
         }
     }
