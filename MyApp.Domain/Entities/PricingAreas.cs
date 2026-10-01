@@ -20,5 +20,16 @@ namespace MyApp.Domain.Entities
 
         public ICollection<RentalDestinations> RentalDestinations { get; private set; } = new List<RentalDestinations>();
         public ICollection<PricingAreaRules> PricingAreaRules { get; private set; } = new List<PricingAreaRules>();
+
+        public PricingAreas(string name, string city, string province, string areaType, bool isActive)
+        {
+            PricingAreaId = Guid.NewGuid();
+            Name = name;
+            City = city;
+            Province = province;
+            AreaType = areaType;
+            IsActive = isActive;
+            CreatedAt = DateTime.Now;
+        }
     }
 }

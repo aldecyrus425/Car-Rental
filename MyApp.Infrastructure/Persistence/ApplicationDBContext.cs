@@ -298,5 +298,9 @@ namespace MyApp.Infrastructure.Persistence
         public DbSet<Vehicles> Vehicles { get; set; }
         public DbSet<VehicleImages> VehicleImages { get; set; }
         public DbSet<VehicleTypes> VehicleTypes { get; set; }
+        public DbSet<VehicleMaintenance> VehicleMaintenance { get; set; }
+        public DbSet<PricingAreaRules> PricingAreasRules { get; set; }
+        public DbSet<PricingAreas> PricingAreas { get; set; }
+        public DbSet<RentalAgreements> RentalAgreements { get; set; }
     }
 }

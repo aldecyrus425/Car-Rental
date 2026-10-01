@@ -47,5 +47,34 @@ namespace MyApp.Domain.Entities
         public ICollection<VehicleInspections> VehicleInspections { get; private set; } = new List<VehicleInspections>();
         public ICollection<DamageReports> DamageReport = new List<DamageReports>();
         public ICollection<AdditionalCharges> AdditionalCharge { get; private set; } = new List<AdditionalCharges>();
+
+        public RentalAgreements(string rentalNumber, Guid customerId, Guid branchId, DateTime startDateTime, DateTime expectedReturnDateTime, string status, string rentalType, string pickupLocation, string returnLocation, decimal startingMileage, decimal startingFuelLevel, decimal subTotal, decimal discountAmount, decimal penaltyAmount, decimal additionalCharges, decimal totalAmount, decimal depositAmount, Guid createdBy)
+        {
+            RentalAgreementId = Guid.NewGuid();
+            RentalNumber = rentalNumber;
+            CustomerId = customerId;
+            BranchId = branchId;
+            StartDateTime = startDateTime;
+            ExpectedReturnDateTime = expectedReturnDateTime;
+            Status = status;
+            RentalType = rentalType;
+            PickupLocation = pickupLocation;
+            ReturnLocation = returnLocation;
+            StartingMileage = startingMileage;
+            StartingFuelLevel = startingFuelLevel;
+            SubTotal = subTotal;
+            DiscountAmount = discountAmount;
+            PenaltyAmount = penaltyAmount;
+            AdditionalCharges = additionalCharges;
+            TotalAmount = totalAmount;
+            DepositAmount = depositAmount;
+            CreatedBy = createdBy;
+            CreatedAt = DateTime.UtcNow;
+        }
+
+        public void ActualReturnDate()
+        {
+            ActualReturnDateTime = DateTime.Now;
+        }
     }
 }
