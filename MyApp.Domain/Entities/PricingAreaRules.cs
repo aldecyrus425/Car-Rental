@@ -22,5 +22,18 @@ namespace MyApp.Domain.Entities
         public bool IsActive { get; private set; }
 
         protected PricingAreaRules() { }
+
+        public PricingAreaRules(Guid pricingAreaId, Guid? vehicleTypeId, string pricingType, decimal amount, int? minimumDays, int? maximumDays, DateOnly effectiveFrom, DateOnly? effectiveTo, bool isActive)
+        {
+            PricingAreaId = pricingAreaId;
+            VehicleTypeId = vehicleTypeId;
+            PricingType = pricingType;
+            Amount = amount;
+            MinimumDays = minimumDays;
+            MaximumDays = maximumDays;
+            EffectiveFrom = effectiveFrom;
+            EffectiveTo = effectiveTo;
+            IsActive = isActive;
+        }
     }
 }
