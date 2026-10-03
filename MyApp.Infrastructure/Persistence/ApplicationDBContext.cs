@@ -302,5 +302,8 @@ namespace MyApp.Infrastructure.Persistence
         public DbSet<PricingAreaRules> PricingAreasRules { get; set; }
         public DbSet<PricingAreas> PricingAreas { get; set; }
         public DbSet<RentalAgreements> RentalAgreements { get; set; }
+        public DbSet<RentalDestinations> RentalDestinations { get; set; }
+        public DbSet<RentalVehicles> RentalVehicles { get; set; }
+        public DbSet<RentalDocuments> RentalDocuments { get; set; }
     }
 }

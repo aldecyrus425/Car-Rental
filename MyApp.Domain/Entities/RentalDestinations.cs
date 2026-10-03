@@ -23,5 +23,18 @@ namespace MyApp.Domain.Entities
         public string? Remarks { get; private set; }
 
         protected RentalDestinations() { }
+        public RentalDestinations(Guid rentalId, Guid areaId, string destinationName, string city, string province, decimal? distanceKm, string destinationType, bool isPrimary, string? remarks)
+        {
+            RentalDestinationId = Guid.NewGuid();
+            RentalId = rentalId;
+            AreaId = areaId;
+            DestinationName = destinationName;
+            City = city;
+            Province = province;
+            DistanceKm = distanceKm;
+            DestinationType = destinationType;
+            IsPrimary = isPrimary;
+            Remarks = remarks;
+        }
     }
 }

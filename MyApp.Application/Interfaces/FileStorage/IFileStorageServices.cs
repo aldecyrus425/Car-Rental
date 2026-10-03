@@ -9,5 +9,6 @@ namespace MyApp.Application.Interfaces.FileStorage
     public interface IFileStorageServices
     {
         Task<string> SaveAsync(Stream fileStream, string fileName, string folder, CancellationToken token);
+        Task DeleteAsync(string filePath, CancellationToken token);
     }
 }

@@ -20,5 +20,17 @@ namespace MyApp.Domain.Entities
         public DateTime CreatedAt { get; private set; }
 
         protected RentalDocuments() { } 
+
+        public RentalDocuments(Guid rentalId, string documentType, string filePath, string fileName, string mimeType, Guid uploadedByUserId)
+        {
+            RentalDocumentId = Guid.NewGuid();
+            RentalId = rentalId;
+            DocumentType = documentType;
+            FilePath = filePath;
+            FileName = fileName;
+            MimeType = mimeType;
+            UploadedByUserId = uploadedByUserId;
+            CreatedAt = DateTime.UtcNow;
+        }
     }
 }

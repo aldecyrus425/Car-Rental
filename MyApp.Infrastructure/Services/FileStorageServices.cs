@@ -16,6 +16,19 @@ namespace MyApp.Infrastructure.Services
             _environtment = environtment;
         }
 
+        public async Task DeleteAsync(string filePath, CancellationToken token)
+        {
+            if (string.IsNullOrWhiteSpace(filePath))
+                return;
+
+            var fullPath = Path.Combine(_environtment.WebRootPath, filePath);
+            if(File.Exists(fullPath))
+            {
+                await Task.Run(() => File.Delete(fullPath), token);
+            }
+
+        }
+
         public async Task<string> SaveAsync(Stream fileStream, string fileName, string folder, CancellationToken token)
         {
             var uploadsFolder = Path.Combine(_environtment.WebRootPath, folder);

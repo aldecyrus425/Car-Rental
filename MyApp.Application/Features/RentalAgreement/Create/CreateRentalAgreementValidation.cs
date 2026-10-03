@@ -1,4 +1,6 @@
 ﻿using FluentValidation;
+using MyApp.Application.Features.RentalDestination.Create;
+using MyApp.Application.Features.RentalVehicle.Create;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,9 @@ namespace MyApp.Application.Features.RentalAgreement.Create
     {
         private static readonly string[] AllowedStatuses = { "Active", "Completed", "Cancelled", "Pending" };
         private static readonly string[] AllowedRentalTypes = { "Daily", "Weekly", "Monthly", "Hourly" };
+        private static readonly string[] AllowedDestinationTypes = { "Airport", "Hotel", "Resort", "City", "Port", "Other" };
+        private static readonly string[] AllowedDocumentExtensions = { ".pdf", ".doc", ".docx", ".jpg", ".jpeg", ".png" };
+        private const long MaxDocumentSize = 10 * 1024 * 1024; // 10 MB
 
         public CreateRentalAgreementValidation()
         {
@@ -125,11 +130,74 @@ namespace MyApp.Application.Features.RentalAgreement.Create
             RuleFor(x => x.CreatedBy)
                 .NotEmpty()
                 .WithMessage("CreatedBy User ID is required.");
+
+            // RentalDestination Validation
+            RuleFor(x => x.RentalDestination)
+                .NotNull()
+                .WithMessage("Rental Destination is required.");
+
+            When(x => x.RentalDestination != null, () =>
+            {
+                RuleFor(x => x.RentalDestination)
+                    .SetValidator(new CreateRentalDistinationValidation());
+            });
+
+            // RentalVehicle Validation
+            RuleFor(x => x.RentalVehicle)
+                .NotNull()
+                .WithMessage("Rental Vehicle is required.");
+
+            When(x => x.RentalVehicle != null, () =>
+            {
+                RuleFor(x => x.RentalVehicle)
+                    .SetValidator(new CreateRentalVehicleValidation());
+            });
+
+            // RentalDocuments Validation
+            RuleFor(x => x.RentalDocuments)
+                .NotNull()
+                .WithMessage("At least one document is required.")
+                .Must(docs => docs != null && docs.Count > 0)
+                .WithMessage("At least one document is required.")
+                .Must(docs => docs.Count <= 5)
+                .WithMessage("You can upload a maximum of 5 documents.");
+
+            RuleForEach(x => x.RentalDocuments)
+                .ChildRules(doc =>
+                {
+                    doc.RuleFor(x => x.Documents)
+                        .NotNull()
+                        .WithMessage("Document file is required.");
+
+                    doc.RuleFor(x => x.Documents.Length)
+                        .GreaterThan(0)
+                        .WithMessage("Document cannot be empty.")
+                        .LessThanOrEqualTo(MaxDocumentSize)
+                        .WithMessage("Document size cannot exceed 10 MB.");
+
+                    doc.RuleFor(x => x.Documents.FileName)
+                        .NotEmpty()
+                        .WithMessage("Document file name is required.")
+                        .Must(IsAllowedDocumentExtension)
+                        .WithMessage("Only PDF, DOC, DOCX, JPG, JPEG, and PNG files are allowed.");
+                });
         }
 
         private static decimal CalculateTotalAmount(CreateRentalAgreementCommand cmd)
         {
             return cmd.SubTotal - cmd.DiscountAmount + cmd.PenaltyAmount + cmd.AdditionalCharges;
         }
+
+        private static bool IsAllowedDocumentExtension(string fileName)
+        {
+            if (string.IsNullOrWhiteSpace(fileName))
+                return false;
+
+            var extension = Path.GetExtension(fileName);
+            return AllowedDocumentExtensions.Contains(extension, StringComparer.OrdinalIgnoreCase);
+        }
     }
+
+    
+
 }

@@ -1,5 +1,8 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Http;
 using MyApp.Application.DTOs;
+using MyApp.Application.Features.RentalDestination.Create;
+using MyApp.Application.Features.RentalVehicle.Create;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,5 +31,17 @@ namespace MyApp.Application.Features.RentalAgreement.Create
         public decimal AdditionalCharges { get; set; }
         public decimal DepositAmount { get; set; }
         public Guid CreatedBy { get; set; }
+        public CreateRentalDistinationCommand RentalDestination { get; set; }
+        public List<RentalDocument> RentalDocuments { get; set; } = new();
+        public CreateRentalVehicleCommand RentalVehicle { get; set; }
+
     }
+
+    public class RentalDocument
+    {
+        public IFormFile Documents { get; set; }
+        public string MimeType { get; set; }
+        public string DocumentType { get; set; }
+    }
+
 }
